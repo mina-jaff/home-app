@@ -1,46 +1,36 @@
-# Getting Started with Create React App
+Home App
+The Home App is a platform for a company that rents to a selected group of tenants.
+To register with Home and start booking apartments, users need to fill in a multi-page application form.
+This project is a proposal for the general design and layout of the platform and the multi-page application form.
+Due to the scope of the project, there is no database connection, and therefore, user data will not be submitted.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Getting Started
+These instructions will guide you on how to set up and run the project locally.
 
-## Available Scripts
+Prerequisites
+Make sure you have the following installed on your machine:
 
-In the project directory, you can run:
+Node.js
+npm
 
-### `npm start`
+Installing Dependencies
+Open a terminal in the project directory and run:
+npm install
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Running the App
+To start the development server, run:
+npm start
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Open your browser and visit http://localhost:3000 to view the app.
 
-### `npm test`
+Running Tests
+To execute tests, run:
+npm test
+This will run the test suite and provide feedback on the test results.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Built With
+React - JavaScript library for building user interfaces.
+TypeScript - A typed superset of JavaScript that compiles to plain JavaScript.
+Jest - A delightful JavaScript Testing Framework.
+React Testing Library - A library for testing React components.
+react-router-dom - Declarative routing for React.js.
