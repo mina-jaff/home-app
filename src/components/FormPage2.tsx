@@ -80,6 +80,7 @@ const FormPage2: React.FC<FormPage2Props> = ({ onNext, onBack, onChange, userDat
           value={userData.password}
           className="form-input"
           onChange={handlePasswordChange}
+          data-testid="password-input"
         />
 
         <label htmlFor="passwordConfirmation" className="form-label">
@@ -91,6 +92,7 @@ const FormPage2: React.FC<FormPage2Props> = ({ onNext, onBack, onChange, userDat
           name="passwordConfirmation"
           className="form-input"
           onChange={handlePasswordConfirmationChange}
+          data-testid="password-confirmation-input"
         />
         {passwordError && <p className="error-message">{passwordError}</p>}
 
