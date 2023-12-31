@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import FormPage1 from './FormPage1';
 import FormPage2 from './FormPage2';
 import FormPage3 from './FormPage3';
+import Modal from './Modal';
 import ProgressTracker from './ProgressTracker';
 import house from '../assets/house-black.png';
 
@@ -38,6 +39,7 @@ const Registration: React.FC = () => {
     
       const [pageCount, setPageCount] = useState<number>(1);
       const [formSubmitted, setFormSubmitted] = useState<boolean>(false);
+      const [showModal, setShowModal] = useState<boolean>(false);
 
       useEffect(() => {
         if (!formSubmitted) {
@@ -61,8 +63,9 @@ const Registration: React.FC = () => {
       };
 
       const handleSubmit = () => {
-        console.log('submitted');
         setFormSubmitted(true);
+        setShowModal(true);
+        setPageCount(pageCount + 1);
     
         setUserData({
           fullName: '',
@@ -76,9 +79,12 @@ const Registration: React.FC = () => {
           passwordConfirmation: '',
         });
         setFormSubmitted(false);
-        setPageCount(1);
-        navigate('/');
       };
+
+      const handleCloseModal = () => {
+        setShowModal(false);
+        navigate('/');
+      }
     
     return (
     <div className="form-container">
@@ -87,9 +93,10 @@ const Registration: React.FC = () => {
           <ProgressTracker pageCount={pageCount} />
             <h1 className="title-standard">Registration Form</h1>
             <img src={house} className="img-small"></img>
-              {pageCount < 3 ? (
+              {pageCount < 3 && (
                 <p>Please complete this registration form to set up your account. This ensures that we can find the right matches for you based on the provided data.</p>
-              ) : <p>Review Your Information</p>}
+              )} 
+              {pageCount === 3 && <p>Review Your Information</p>}
         </header>
         {pageCount === 1 && (
             <FormPage1 onNext={handleNext} onChange={handleChange} userData={userData} pageCount={pageCount} formSubmitted={formSubmitted} />
@@ -100,6 +107,7 @@ const Registration: React.FC = () => {
         {pageCount === 3 && (
           <FormPage3 onBack={handleBack} onSubmit={handleSubmit} userData={userData} pageCount={pageCount} />
         )}
+        {pageCount === 4 && showModal && (<Modal onClick={handleCloseModal}/>)}
     </section>
     </div>
   );

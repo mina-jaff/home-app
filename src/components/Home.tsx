@@ -1,9 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import AppFooter from './AppFooter';
+import PreviewContainer from './PreviewContainer';
 import picOne from '../assets/pic-one.jpg';
 import picTwo from '../assets/pic-two.jpg';
+import picThree from '../assets/pic-three.jpg';
 import picFour from '../assets/pic-four.jpg';
+import picFive from '../assets/pic-five.jpg';
+import picSix from '../assets/pic-six.jpg';
 
 interface HomeProps {
   title?: string;
@@ -37,21 +41,12 @@ const Home: React.FC<HomeProps> = ({
           <button className="btn-standard" onClick={handleCtaClick}>{ctaText}</button>
     </section>
     <section className="preview">
-      <div className="preview-container">
-        <img src={picOne} className="img-preview"/>
-        <p>Berlin, Prenzlauer Berg, 1 Bedroom Apartment</p>
-        <button className="btn-standard">apply</button>
-      </div>
-      <div className="preview-container">
-        <img src={picTwo} className="img-preview"/>
-        <p>Berlin, Neukölln, 3 Bedroom Apartment</p>
-        <button className="btn-standard">apply</button>
-      </div>
-      <div className="preview-container">
-        <img src={picFour} className="img-preview"/>
-        <p>Berlin, Tempelhof, 2 Bedroom Apartment</p>
-        <button className="btn-standard">apply</button>
-      </div>
+      <PreviewContainer imgSrc={picOne} description={'Berlin, Moabit, 2 Bedroom Apartment'}/>
+      <PreviewContainer imgSrc={picTwo} description={'Berlin, Neukölln, 4 Bedroom Apartment'}/>
+      <PreviewContainer imgSrc={picThree} description={'Berlin, Charlottenburg, 3 Bedroom Apartment'}/>
+      <PreviewContainer imgSrc={picFour} description={'Berlin, Kreuzberg, 3 Bedroom Apartment'}/>
+      <PreviewContainer imgSrc={picFive} description={'Berlin, Tempelhof, Single Studio'}/>
+      <PreviewContainer imgSrc={picSix} description={'Berlin, Friedrichshagen, 2 Bedroom Apartment'}/>
     </section>
     <AppFooter />
     </div>

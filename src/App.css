@@ -144,6 +144,7 @@
 .img-preview {
   height: 15rem;
   width: 15rem;
+  object-fit: cover;
   overflow: hidden;
 }
 
@@ -189,6 +190,7 @@
   align-items: center;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   width: 100%;
 }
@@ -208,6 +210,10 @@
   width: 20rem;
 }
 
+.preview-container:hover {
+  cursor: pointer;
+}
+
 .progress-bar {
   border-radius: 1.2rem;
   height: 100%;
@@ -219,6 +225,10 @@
   height: 1rem;
   margin-right: 1rem;
   width: 100%;
+}
+
+.p-standard {
+  margin-bottom: 2rem;
 }
 
 .title-standard {
@@ -252,6 +262,9 @@ ul, li {
   }
   .preview-container {
     margin: 2rem;
+  }
+  .p-standard {
+    margin-bottom: 1rem;
   }
 }
 

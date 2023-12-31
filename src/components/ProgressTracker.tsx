@@ -5,7 +5,7 @@ interface ProgressTrackerProps {
 }
 
 const ProgressTracker: React.FC<ProgressTrackerProps> = ({ pageCount }) => {
-    const progressPercentage = (pageCount - 1) * 50;
+    const progressPercentage = pageCount <= 3 ? (pageCount - 1) * 50 : 100;
 
     return (
     <div className="flex-container">
