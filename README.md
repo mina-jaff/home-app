@@ -37,7 +37,7 @@ cd home-app
 
 and then run the following command:
 
-node backend index.js
+node backend/index.js
 
 With this running in the background, open a new tab. Now start the development server, and run:
 
