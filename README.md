@@ -29,7 +29,7 @@ npm install
 **Running the App**
 
 First, connect to the database. To do this, you need to open backend/index.js in a code editor and update the uri. 
-The uri string has a <password> placeholder - this needs to be deleted and replaced with the actual password that I shared.
+The uri string has a "< password >" placeholder - this needs to be deleted and replaced with the actual password that I shared.
 
 Once that is updated and saved, in the command line, navigate to the app
 
